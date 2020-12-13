@@ -1,12 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Square from './components/Square'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Whack a Mole</Text>
+      <View>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
+      </View>
     </View>
   );
 }
