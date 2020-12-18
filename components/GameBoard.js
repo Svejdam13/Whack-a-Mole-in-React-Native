@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Square from './Square';
 
 const GameBoard = () => {
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(10);
 
   useEffect(() => {
     if(!timeLeft) return
