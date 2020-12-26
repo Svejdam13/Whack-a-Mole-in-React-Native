@@ -7,3 +7,4 @@ Game built with react, following tutorial from Ania Kubow
 - EXPO
 - Hooks
 - React Native
+- Redux
