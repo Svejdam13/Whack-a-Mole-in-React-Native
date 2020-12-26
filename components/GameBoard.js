@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Square from './Square';
+import { connect } from 'react-redux';
 
-const GameBoard = () => {
+const GameBoard = (props) => {
   const [timeLeft, setTimeLeft] = useState(10);
 
   useEffect(() => {
@@ -18,6 +19,7 @@ const GameBoard = () => {
     <View style={styles.container}>
       <Text>Whack a Mole</Text>
       <Text>{timeLeft}</Text>
+      <Text>{props.score}</Text>
       <View style={styles.game}>
         <Square></Square>
         <Square></Square>
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 100,
   },
   game: {
     flexDirection: 'row',
@@ -51,4 +53,10 @@ const styles = StyleSheet.create({
   }
 });
 
-export default GameBoard
+const mapStateToProps = state => {
+  return {
+    score: state.score
+  }
+}
+
+export default connect(mapStateToProps)(GameBoard)
